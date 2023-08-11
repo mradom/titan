@@ -4,6 +4,7 @@
 <div class="container-fluid">
     <div class="header">
         <h1>Setup Sheet</h1>
+        <button class="btn btn-primary shareButton" id="shareButton" type="button">Compartir</button>
     </div>
     <div class="row">
         <div class="col-md-2">Auto: {{ strtoupper($setupSheet->auto) }}</div>
@@ -34,7 +35,7 @@
             <h5>Suspensión</h5>
             <table class="table table-striped">
                 <tr><td>Espirales</td><td>{{ $setupSheet->espirales_rear }}</td></tr>
-                <tr><td>Amortiguadores</td><td>{{ $setupSheet->amortiguadores_total_rear }} / {{ $setupSheet->amortiguadores_baja_rear }} / {{ $setupSheet->amortiguadores_alta_rear }} / {{ $setupSheet->amortiguadores_exp_rear }}</td></tr>
+                <tr><td>Amortiguadores</td><td>BAJA {{ $setupSheet->amortiguadores_baja_rear }} / ALTA {{ $setupSheet->amortiguadores_alta_rear }} / EXP {{ $setupSheet->amortiguadores_exp_rear }}</td></tr>
                 <tr><td>Total Reg.</td><td>{{ $setupSheet->amortiguadores_total_rear }} / {{ $setupSheet->amortiguadores_baja_rear }} / {{ $setupSheet->amortiguadores_alta_rear }}</td></tr>
                 <tr><td>Valving</td><td>{{ $setupSheet->valving_rear }}</td></tr>
                 <tr><td>Barra / Posición</td><td>{{ $setupSheet->barra_posicion_rear }}</td></tr>
@@ -113,4 +114,22 @@
         background-color: rgba(245, 105, 32, 0.05);
     }
 </style>
+
+<script>
+    document.getElementById('shareButton').addEventListener('click', function() {
+        if (navigator.share) {
+            navigator.share({
+                title: 'Título del contenido compartido',
+                text: 'Descripción del contenido compartido',
+                url: 'URL del contenido compartido'
+            }).then(() => {
+                console.log('Contenido compartido con éxito');
+            }).catch(error => {
+                console.error('Error al compartir:', error);
+            });
+        } else {
+            console.log('La función de compartir no está disponible en este dispositivo.');
+        }
+    });
+    </script>
 @endsection
