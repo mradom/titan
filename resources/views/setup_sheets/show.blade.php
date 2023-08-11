@@ -119,9 +119,9 @@
     document.getElementById('shareButton').addEventListener('click', function() {
         if (navigator.share) {
             navigator.share({
-                title: 'Título del contenido compartido',
-                text: 'Descripción del contenido compartido',
-                url: 'URL del contenido compartido'
+                title: 'Ficha de configuración',
+                text: 'Ficha de {{ strtoupper($setupSheet->piloto) }} - {{ strtoupper($setupSheet->auto) }}',
+                url: ''
             }).then(() => {
                 console.log('Contenido compartido con éxito');
             }).catch(error => {
