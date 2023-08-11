@@ -22,9 +22,6 @@
                         <a href="{{ route('setup_sheets.show', ['auto' => urlencode($setupSheet->auto), 'piloto' => urlencode($setupSheet->piloto)]) }}" class="btn btn-info">View</a>
                         <a href="#" class="btn btn-primary">Edit</a>
                         <a href="#" class="btn btn-danger">Delete</a>
-                        <a href="#" class="btn btn-success">
-                            <i class="fab fa-whatsapp"></i> Share via WhatsApp
-                        </a>
                     </div>
                 </div>
             </div>
