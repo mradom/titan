@@ -58,7 +58,8 @@
         <div class="col-md-4">
             <h3 class="section-title">Trasmisión</h3>
             <table class="table table-striped">
-                <tr><td>Diferenciales</td><td>{{ $setupSheet->diferenciales_front }}</td></tr>
+                <tr><td>Diferencial Delantero</td><td>{{ $setupSheet->diferenciales_front }}</td></tr>
+                <tr><td>Diferencial Trasero</td><td>{{ $setupSheet->diferenciales_rear }}</td></tr>
             </table>
         </div>
         <div class="col-md-4">
