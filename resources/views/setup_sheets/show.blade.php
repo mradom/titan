@@ -2,17 +2,30 @@
 
 @section('content')
 <div class="container-fluid">
-    <div class="header">
-        <h1>Setup Sheet</h1>
-        <button class="btn btn-primary shareButton" id="shareButton" type="button">Compartir</button>
+    <div class="header bg-warning text-center py-3">
+        <h1 class="text-uppercase">Setup Sheet</h1>
+        <button class="btn btn-primary shareButton mobile-only" id="shareButton" type="button">Compartir</button>
     </div>
-    <div class="row">
-        <div class="col-md-2">Auto: {{ strtoupper($setupSheet->auto) }}</div>
-        <div class="col-md-2">Piloto: {{ strtoupper($setupSheet->piloto) }}</div>
-        <div class="col-md-2">Fecha: {{ strtoupper($setupSheet->fecha) }}</div>
-        <div class="col-md-2">Evento: {{ strtoupper($setupSheet->evento) }}</div>
-        <div class="col-md-2">Clima: {{ strtoupper($setupSheet->clima) }}</div>
-        <div class="col-md-2">Superficie: {{ strtoupper($setupSheet->superficie) }}</div>
+
+    <div class="row mt-3">
+        <div class="col-md-2 mb-2">
+            <b>Auto:</b> {{ strtoupper($setupSheet->auto) }}
+        </div>
+        <div class="col-md-2 mb-2">
+            <b>Piloto:</b> {{ strtoupper($setupSheet->piloto) }}
+        </div>
+        <div class="col-md-2 mb-2">
+            <b>Fecha:</b> {{ strtoupper($setupSheet->fecha) }}
+        </div>
+        <div class="col-md-2 mb-2">
+            <b>Evento:</b> {{ strtoupper($setupSheet->evento) }}
+        </div>
+        <div class="col-md-2 mb-2">
+            <b>Clima:</b> {{ strtoupper($setupSheet->clima) }}
+        </div>
+        <div class="col-md-2 mb-2">
+            <b>Superficie:</b> {{ strtoupper($setupSheet->superficie) }}
+        </div>
     </div>
     <div class="row">
         <div class="col-md-6">
@@ -92,13 +105,11 @@
 <style>
     body {
         background-color: #f8f9fa;
-        text-transform: uppercase;
+        text-transform: capitalize;
     }
     .header {
         background-color: #F2CC11;
         color: #000000;
-        padding: 20px;
-        text-align: center;
     }
     .section-title {
         background-color: #F2CC11;
@@ -113,6 +124,20 @@
     }
     .table-striped tbody tr:nth-of-type(odd) {
         background-color: rgba(245, 105, 32, 0.05);
+    }
+
+    /* Estilos específicos para dispositivos móviles */
+    @media (max-width: 767px) {
+        .mobile-only {
+            display: block; /* Muestra el botón solo en dispositivos móviles */
+        }
+    }
+
+    /* Estilos para ocultar el botón en pantallas más grandes */
+    @media (min-width: 768px) {
+        .mobile-only {
+            display: none; /* Oculta el botón en pantallas más grandes */
+        }
     }
 </style>
 
