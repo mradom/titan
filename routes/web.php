@@ -14,12 +14,9 @@ use App\Http\Controllers\SetupSheetController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return redirect('/setup-sheets');
+    //return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
