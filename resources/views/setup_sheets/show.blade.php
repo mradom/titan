@@ -8,6 +8,10 @@
     </div>
 
     <div class="row mt-3">
+        <a href="{{ route('setup_sheets.edit', ['auto' => urlencode($setupSheet->auto), 'piloto' => urlencode($setupSheet->piloto)]) }}" class="btn btn-primary" role="button">Edit</a>
+    </div>
+
+    <div class="row mt-3">
         <div class="col-md-2 mb-2">
             <b>Auto:</b> {{ strtoupper($setupSheet->auto) }}
         </div>
