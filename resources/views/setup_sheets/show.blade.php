@@ -38,7 +38,7 @@
             <table class="table table-striped">
                 <tr><td>Espirales</td><td>{{ $setupSheet->espirales_front }}</td></tr>
                 <tr><td>Amortiguadores</td><td>BAJA {{ $setupSheet->amortiguadores_baja_front }} / ALTA {{ $setupSheet->amortiguadores_alta_front }} / EXP {{ $setupSheet->amortiguadores_exp_front }}</td></tr>
-                <tr><td>Total Reg.</td><td>{{ $setupSheet->amortiguadores_total_front }} / {{ $setupSheet->amortiguadores_baja_front }} / {{ $setupSheet->amortiguadores_alta_front }}</td></tr>
+                <tr><td>Total Reg.</td><td>{{ $setupSheet->amortiguadores_total_front }}</td></tr>
                 <tr><td>Valving</td><td>{{ $setupSheet->valving_front }}</td></tr>
                 <tr><td>Barra / Posición</td><td>{{ $setupSheet->barra_posicion_front }}</td></tr>
                 <tr><td>Convergencia</td><td>{{ $setupSheet->convergencia_front }}</td></tr>
@@ -53,7 +53,7 @@
             <table class="table table-striped">
                 <tr><td>Espirales</td><td>{{ $setupSheet->espirales_rear }}</td></tr>
                 <tr><td>Amortiguadores</td><td>BAJA {{ $setupSheet->amortiguadores_baja_rear }} / ALTA {{ $setupSheet->amortiguadores_alta_rear }} / EXP {{ $setupSheet->amortiguadores_exp_rear }}</td></tr>
-                <tr><td>Total Reg.</td><td>{{ $setupSheet->amortiguadores_total_rear }} / {{ $setupSheet->amortiguadores_baja_rear }} / {{ $setupSheet->amortiguadores_alta_rear }}</td></tr>
+                <tr><td>Total Reg.</td><td>{{ $setupSheet->amortiguadores_total_rear }}</td></tr>
                 <tr><td>Valving</td><td>{{ $setupSheet->valving_rear }}</td></tr>
                 <tr><td>Barra / Posición</td><td>{{ $setupSheet->barra_posicion_rear }}</td></tr>
                 <tr><td>Convergencia</td><td>{{ $setupSheet->convergencia_rear }}</td></tr>
